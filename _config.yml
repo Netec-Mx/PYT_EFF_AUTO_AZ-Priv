@@ -1,0 +1,15 @@
+title: Automatización de procesos con Python
+description: Plataforma de laboratorios
+theme: jekyll-theme-primer
+repository: Netec-Mx/PYT_EFF_AUTO_AZ-Priv
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+defaults:
+  - scope:
+      path: ""
+    values:
+      render_with_liquid: false
