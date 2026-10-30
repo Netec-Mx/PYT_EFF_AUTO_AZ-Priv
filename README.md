@@ -12,78 +12,67 @@ El programa se enfoca en evolucionar desde scripts hacia componentes de automati
 
 Las prácticas se desarrollan con datos y escenarios ficticios. El curso incorpora además el uso responsable de Claude Code y GitHub Copilot como apoyo durante el desarrollo con Python.
 
-
-
-
 ---
 
 ## Lista de laboratorios
 
 <a id="capitulo-1"></a>
 
-### Capítulo 1. Diseño de automatizaciones y estándares de ingeniería Python
+### 📘 Capítulo 1. Diseño de automatizaciones y estándares de ingeniería Python
 
 - Práctica: [Práctica 1. De un proceso manual a una automatización mantenible](Capitulo01/README.md)
-- Duración estimada de la práctica: 90 min
-- Actividades: analizar un proceso manual, definir su alcance, sus modos de fallo y los puntos de aprobación humana, y estructurar una solución modular con anotaciones de tipo, configuración externa, variables de entorno, gestión de dependencias y documentación.
-- Resultado: la automatización compras-auto, que valida y clasifica solicitudes de compra, envía a aprobación las que superan el límite, separa los registros inválidos y comprueba que ninguno se pierda.
+- Duración estimada: 90 min
+- Descripción: Analizar un proceso repetitivo relacionado con datos y transformarlo en la base de una automatización Python estructurada y reutilizable. Primero vas a identificar qué conviene automatizar, definir el alcance, los modos de fallo y los puntos que requieren aprobación humana. Después construirás una solución modular con anotaciones de tipo, configuración externa, variables de entorno, gestión de dependencias y documentación.
 
 <a id="capitulo-2"></a>
 
-### Capítulo 2. Automatización de archivos, datos y Data Quality
+### 📘 Capítulo 2. Automatización de archivos, datos y Data Quality
 
 - Práctica: [Práctica 2. Automatización de calidad y validación de contratos de datos](Capitulo02/README.md)
-- Duración estimada de la práctica: 120 min
-- Actividades: ingerir archivos, validar su esquema y su contrato de datos, aplicar reglas de calidad, detectar problemas de completitud, duplicados y anomalías, y transformar los datos.
-- Resultado: el validador calidad-datos, que genera resultados, excepciones y reportes, y se reutiliza sobre dos conjuntos de datos distintos cambiando solo la configuración.
+- Duración estimada: 120 min
+- Descripción: Automatizar controles repetibles de estructura y calidad sobre conjuntos de datos ficticios destinados a un flujo de procesamiento empresarial. Vas a construir una automatización configurable que ingiere archivos y valida su esquema y su contrato de datos, aplica reglas de calidad, detecta problemas de completitud, duplicados y anomalías, transforma los datos y genera automáticamente resultados y excepciones. La misma lógica se reutiliza sobre dos conjuntos de datos distintos cambiando solo la configuración.
 
 <a id="capitulo-3"></a>
 
-### Capítulo 3. Integración con APIs, servicios, bases de datos y warehouses
+### 📘 Capítulo 3. Integración con APIs, servicios, bases de datos y warehouses
 
 - Práctica: [Práctica 3. Automatización de integración de datos con Snowflake](Capitulo03/README.md)
-- Duración estimada de la práctica: 120 min
-- Actividades: extraer datos de una API ficticia con autenticación, paginación, límites de tasa, tiempos de espera y reintentos, validar las respuestas con Pydantic y cargarlas en un emulador local de Snowflake mediante el conector oficial.
-- Resultado: el integrador integracion-ventas, con control de esquema, reconciliación e idempotencia, que puede ejecutarse repetidamente de forma segura.
+- Duración estimada: 120 min
+- Descripción: Automatizar la integración de datos de una API ficticia con Snowflake o un entorno simulado. La automatización cubre la extracción (autenticación, paginación, límites de tasa, timeouts y reintentos), la validación (contrato de la respuesta con Pydantic), la carga (control de esquema, reconciliación e idempotencia) y las credenciales (en variables de entorno, nunca en el código). El destino es un emulador local de Snowflake.
 
 <a id="capitulo-4"></a>
 
-### Capítulo 4. Ingeniería de confiabilidad, observabilidad y remediación
+### 📘 Capítulo 4. Ingeniería de confiabilidad, observabilidad y remediación
 
 - Práctica: [Práctica 4. Monitoreo de pipelines y remediación controlada de pipelines](Capitulo04/README.md)
-- Duración estimada de la práctica: 90 min
-- Actividades: detectar fallos en un pipeline, recolectar información diagnóstica sin exponer datos sensibles, decidir si cada fallo es recuperable y aplicar reintentos, alertas o remediación controlada, como se haría en Amazon MWAA con CloudWatch, sin necesidad de una cuenta de AWS.
-- Resultado: el monitor monitoreo-pipeline, que cierra el ciclo de detectar, diagnosticar, decidir, actuar y registrar, y deja cada decisión en una auditoría verificable.
+- Duración estimada: 90 min
+- Descripción: Implementar el monitoreo de un pipeline de datos como se haría en Amazon MWAA con CloudWatch: detectar fallos con las señales de código de salida, tiempo máximo, volumen y latido; recolectar información diagnóstica sin exponer datos sensibles; decidir si cada fallo es recuperable; aplicar reintentos, alertas o remediación controlada según el caso; y registrar cada decisión operativa en una auditoría verificable. No necesitas cuenta de AWS.
 
 <a id="capitulo-5"></a>
 
-### Capítulo 5. Pruebas, paralelismo y optimización de rendimiento
+### 📘 Capítulo 5. Pruebas, paralelismo y optimización de rendimiento
 
 - Práctica: [Práctica 5. Pruebas y escalamiento de una automatización](Capitulo05/README.md)
-- Duración estimada de la práctica: 120 min
-- Actividades: construir pruebas unitarias, de integración, con objetos simulados, con datos sintéticos y de regresión, validar el manejo de fallos de una API, medir el rendimiento y aplicar una optimización.
-- Resultado: un pipeline de ventas con su suite de pruebas y una comparación del antes y el después de la optimización, sin regresiones.
+- Duración estimada: 120 min
+- Descripción: Implementar una suite de pruebas para un pipeline de datos y escalarlo de forma segura. Incluye pruebas unitarias, de integración, con mocks, con datos sintéticos y de regresión; validar que los fallos de la API (timeout, 5xx, 429, JSON inválido) se manejan como indica el diseño; y medir, aplicar una optimización y comparar el antes y el después sin regresiones. Todo es local: no necesitas cuentas, Docker ni servicios en la nube.
 
 <a id="capitulo-6"></a>
 
-### Capítulo 6. Programación de ejecuciones, orquestación, seguridad y despliegue
+### 📘 Capítulo 6. Programación de ejecuciones, orquestación, seguridad y despliegue
 
 - Práctica: [Práctica 6. De automatización local a solución desplegable y orquestada](Capitulo06/README.md)
-- Duración estimada de la práctica: 180 min, más una parte opcional de 30 min con Airflow local, que no se incluye en el total
-- Actividades: empaquetar una automatización como paquete interno con CLI, contenerizarla con Docker, configurar CI/CD con GitHub Actions y definir un DAG para Amazon MWAA.
-- Resultado: la solución cargaventas, con wheel verificado, imagen de contenedor, flujos de integración y entrega, y un DAG que coordina tareas, dependencias, estados y manejo de fallos. Todo se ejecuta en el equipo local.
+- Duración estimada: 180 min
+- Descripción: Preparar una automatización Python para su ejecución reproducible: empaquetarla como paquete interno con CLI, versión única, lockfile con hashes y un wheel verificado; contenerizarla con Docker en una imagen multi-stage que corre sin root y recibe sus secretos desde fuera; configurar CI/CD con GitHub Actions con pruebas, calidad, seguridad y una entrega controlada con prueba de humo y reversión; y definir un DAG para Amazon MWAA que coordine las tareas, sus dependencias, sus estados y el manejo de fallos con base en el código de salida. No necesitas cuenta de AWS: todo se ejecuta en tu equipo. La parte de la nube (ECR, ECS Fargate, MWAA) queda escrita, validada y lista para conectarse.
 
 <a id="capitulo-7"></a>
 
-### Capítulo 7. IA aplicada al desarrollo y automatizaciones reutilizables
+### 📘 Capítulo 7. IA aplicada al desarrollo y automatizaciones reutilizables
 
 - Práctica: [Práctica 7. Productividad del desarrollo asistida por IA](Capitulo07/README.md)
-- Duración estimada de la práctica: 120 min
-- Actividades: usar Claude Code o GitHub Copilot sobre código existente para revisar, refactorizar, depurar, generar pruebas y documentar, verificando técnicamente cada propuesta antes de incorporarla.
-- Resultado: un script heredado de cálculo de comisiones corregido y mantenible, sin cambios en su contrato, con evidencia de que es correcto y seguro.
+- Duración estimada: 120 min
+- Descripción: Aplicar IA de manera controlada sobre actividades concretas del ciclo de desarrollo Python y validar técnicamente el resultado antes de incorporarlo. Usarás Claude Code o GitHub Copilot sobre código existente para revisar, refactorizar y depurar, generar pruebas y documentar. Cada propuesta de la IA es un borrador: solo entra a la solución si cruza las capas de verificación del equipo.
 
 ---
-
 
 ## 📬 Contacto y más información
 
