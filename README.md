@@ -13,18 +13,7 @@ El programa se enfoca en evolucionar desde scripts hacia componentes de automati
 Las prácticas se desarrollan con datos y escenarios ficticios. El curso incorpora además el uso responsable de Claude Code y GitHub Copilot como apoyo durante el desarrollo con Python.
 
 
-## Navegación rápida
 
-- [Capítulo 1. Diseño de automatizaciones y estándares de ingeniería Python](#capitulo-1)
-- [Capítulo 2. Automatización de archivos, datos y Data Quality](#capitulo-2)
-- [Capítulo 3. Integración con APIs, servicios, bases de datos y warehouses](#capitulo-3)
-- [Capítulo 4. Ingeniería de confiabilidad, observabilidad y remediación](#capitulo-4)
-- [Capítulo 5. Pruebas, paralelismo y optimización de rendimiento](#capitulo-5)
-- [Capítulo 6. Programación de ejecuciones, orquestación, seguridad y despliegue](#capitulo-6)
-- [Capítulo 7. IA aplicada al desarrollo y automatizaciones reutilizables](#capitulo-7)
-- [Resumen de tiempos](#resumen-de-tiempos)
-- [Materiales y anexos](#materiales-y-anexos)
-- [Contacto y más información](#contacto)
 
 ---
 
